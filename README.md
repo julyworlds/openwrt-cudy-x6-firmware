@@ -6,7 +6,8 @@ Modules added:
 - Luci
   - app openvpn
   - app sqm
-  - app
+  - app ddns
+  - app upnp
 - Theme openwrt 2020
 
 Installation:

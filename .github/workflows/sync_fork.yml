@@ -19,6 +19,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: julyworlds/openwrt-cudy-x6
+        persist-credentials: false
         ref: master
 
     - name: Sync upstream changes

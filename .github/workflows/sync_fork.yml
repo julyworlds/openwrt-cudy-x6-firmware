@@ -39,5 +39,6 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
+        repository: julyworlds/openwrt-cudy-x6
         github_token: ${{ secrets.PUSH_TOKEN }}
         branch: master

@@ -35,4 +35,9 @@ jobs:
           git remote add upstream https://github.com/openwrt/openwrt.git
           git fetch upstream
           git merge --no-edit upstream/master
-          git push origin master
+          
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.PUSH_TOKEN }}
+        branch: master

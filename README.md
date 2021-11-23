@@ -5,10 +5,11 @@ Check [Releases](https://github.com/julyworlds/openwrt-cudy-x6-firmware/releases
 Modules added:
 - Luci
   - app openvpn
+  - app wireguard
   - app sqm
   - app ddns
   - app upnp
-- Theme openwrt 2020
+- Theme openwrt bootstrap
 
 Installation:
 

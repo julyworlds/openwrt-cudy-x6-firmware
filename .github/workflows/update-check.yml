@@ -18,8 +18,8 @@ env:
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '0 2 * * 1,4'
-    # scheduled at 01:00 every Monday and Thursday
+    - cron:  '10 0 * * *'
+    # scheduled at 0:10 every day
 
 jobs:
   check:

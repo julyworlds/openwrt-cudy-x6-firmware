@@ -4,6 +4,7 @@ Check [Releases](https://github.com/julyworlds/openwrt-cudy-x6-firmware/releases
 
 Modules added:
 - Luci
+  - app adblock
   - app openvpn
   - app wireguard
   - app sqm

@@ -2,6 +2,8 @@
 
 Check [Releases](https://github.com/julyworlds/openwrt-cudy-x6-firmware/releases) to download the firmware.
 
+(Beware that this firmware is based on the development branch of openwrt and sometimes builds break, if that happens try with an older firmware)
+
 Modules added:
 - Luci
   - app adblock
@@ -23,6 +25,9 @@ Be sure to NOT keep settings. The force upgrade might need to be checked
 due to differences in router naming conventions.
 
 Recovery:
+
+To download the stock firmware go to: https://www.cudytech.com/x6_software_download
+(Optionally, you can find in this repository the stock firmware dated on 2022-01-24)
 
 Only signed manufacture firmwares due to bootloader RSA verification
 

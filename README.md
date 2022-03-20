@@ -12,6 +12,7 @@ Modules added:
   - app sqm
   - app ddns
   - app upnp
+  - app vpn policy routing
 - Theme openwrt bootstrap
 
 Installation:

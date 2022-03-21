@@ -12,6 +12,7 @@ name: Build OpenWrt
 
 on:
   repository_dispatch:
+    types: snapshot
   workflow_dispatch:
     inputs:
       ssh:

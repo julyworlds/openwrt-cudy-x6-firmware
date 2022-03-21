@@ -50,7 +50,7 @@ jobs:
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.PUSH_TOKEN }}
-        event-type: Source Code Update
+        event-type: snapshot
 
     - name: Delete workflow runs
       uses: GitRML/delete-workflow-runs@main

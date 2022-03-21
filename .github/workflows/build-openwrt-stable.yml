@@ -12,6 +12,7 @@ name: Build OpenWrt Stable
 
 on:
   repository_dispatch:
+    types: stable
   workflow_dispatch:
     inputs:
       ssh:

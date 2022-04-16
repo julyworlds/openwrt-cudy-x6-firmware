@@ -189,6 +189,6 @@ jobs:
       with:
         keep_latest: 5
         delete_tags: true
-        pattern: ${{ env.NAME }}
+        delete_tag_pattern: ${{ env.NAME }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

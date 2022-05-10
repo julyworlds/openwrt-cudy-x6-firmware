@@ -3,10 +3,6 @@
 name: Sync fork
 
 on:
-  schedule:
-    - cron:  '0 */4 * * *'
-    # scheduled every 4 hours
-
   workflow_dispatch:  # click the button on Github repo!
   
 jobs:

@@ -4,7 +4,7 @@ Check [Releases](https://github.com/julyworlds/openwrt-cudy-x6-firmware/releases
 
 Firmware versions:
 - stable-21.02-* (Based on the stable 21.02 **Recommended**)
-- snapshot-* (Beware that this firmware is based on the development branch of openwrt and sometimes builds break, if that happens try with an older firmware or the stable version)
+- ***NOT UPDATING*** (Added to snapshot openwrt, please use the official one) snapshot-* (Beware that this firmware is based on the development branch of openwrt and sometimes builds break, if that happens try with an older firmware or the stable version)
 
 Modules added:
 - Luci

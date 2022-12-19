@@ -99,13 +99,20 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
+        
+    - name: HOTFIX broken build
+      id: hotfix_stable
+      run: |
+        cd openwrt
+        git config user.email "fake@example.com"
+        git config user.name "Fake"
+        git revert 794ddf5ca2c67af82f22061a617b2c23c65380fc
+        git revert d604032c2a50fc6228bcaae78baee1048ff9af16
+        
     - name: Compile the firmware
       id: compile
       run: |
         cd openwrt
-        git revert 794ddf5ca2c67af82f22061a617b2c23c65380fc
-        git revert d604032c2a50fc6228bcaae78baee1048ff9af16
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 || make -j1 V=s
         echo "::set-output name=status::success"

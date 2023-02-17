@@ -1,3 +1,10 @@
+# ***WARNING***
+This firmware is only for Cudy X6 `v1`
+
+The newer version `v2` has a different flash and flash layout. (Flash has been downgraded to 16M)
+
+This firmware will not work on `v2+`! Check for more information http://www.cudytech.com/openwrt_software_download
+
 # Firmware Openwrt for Cudy X6
 
 Check [Releases](https://github.com/julyworlds/openwrt-cudy-x6-firmware/releases) to download the firmware.

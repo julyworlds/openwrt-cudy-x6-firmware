@@ -38,7 +38,7 @@ Recovery:
 
 To download the stock firmware go to: https://www.cudytech.com/x6_software_download
 (Optionally, you can find in this repository the stock firmware for `v1` dated on 2022-01-24) (X6-R13-1.12.7-20220123-205651-flash.zip)
-(If using `v2` fo to the manufacture's website and download it)
+(If using `v2` go to the manufacture's website and download it)
 
 Only signed manufacture firmwares due to bootloader RSA verification
 

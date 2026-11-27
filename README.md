@@ -22,7 +22,7 @@ Images in each snapshot release:
 | `*-cudy_x6-v2-squashfs-sysupgrade.bin` | v2 (16M flash) | no (more free space) |
 
 Modules added:
-- EasyMesh (prplMesh controller + agent, with local size and bug fix patches)
+- EasyMesh (prplMesh controller + agent, built from [our prplMesh fork](https://github.com/julyworlds/prplMesh/tree/openwrt) with size, mbedTLS, roaming and bug fixes)
   - Disabled by default, enable it in Network -> EasyMesh
   - Works with EasyMesh extenders (tested with TP-Link RE500X) for client roaming / steering
 - Luci

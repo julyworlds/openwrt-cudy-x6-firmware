@@ -36,12 +36,13 @@ Modules added:
   - proto wireguard
   - proto ppp / ipv6
 - Theme openwrt bootstrap
-- Full wpad (OpenSSL): access point and WiFi client, WPA3, 802.11k/v/r
-- dnsmasq-full, iperf3, curl
+- Full wpad (mbedTLS): access point and WiFi client, WPA3, 802.11k/v/r
+- dnsmasq, iperf3, curl
 
 Removed to save space: opkg (apk is used), Lua LuCI compatibility, legacy
 iptables tools (firewall4/nftables is used), ipset, ip-full (ip-tiny is used),
-wolfSSL and mbedTLS (everything uses OpenSSL, already needed by prplMesh and OpenVPN).
+dnsmasq-full (DNSSEC, nftset/ipset and TFTP were not used), wolfSSL and OpenSSL
+(everything uses mbedTLS, prplMesh included through a local patch).
 
 Installation:
 

@@ -12,11 +12,19 @@
 set -e
 
 T=$(echo bin/targets/ramips/mt7621)
+
+for d in v1 v2; do
+	if ! ls "$T"/*cudy_x6-$d-squashfs-sysupgrade.bin >/dev/null 2>&1; then
+		echo "extra-images: no cudy_x6-$d image from the main build in $T" >&2
+		exit 1
+	fi
+done
+
 KEEP=$(mktemp -d)
 
 # 1. Keep the images of the main build
 mv "$T"/*cudy_x6-v1-* "$KEEP"/
-for f in "$T"/*cudy_x6-v2-*; do
+for f in "$T"/*cudy_x6-v2-initramfs* "$T"/*cudy_x6-v2-squashfs*; do
 	mv "$f" "$KEEP/$(basename "${f/cudy_x6-v2-/cudy_x6-v2-mesh-}")"
 done
 mv "$T/openwrt-ramips-mt7621.manifest" "$KEEP/openwrt-ramips-mt7621-mesh.manifest"

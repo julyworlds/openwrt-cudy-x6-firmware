@@ -13,16 +13,35 @@ Firmware versions:
 
 NOTE: The current versions of openwrt support cudy x6, use this snapshot firmware only if you dont want to build it yourself.
 
+Images in each snapshot release:
+
+| File | Device | EasyMesh |
+|---|---|---|
+| `*-cudy_x6-v1-squashfs-sysupgrade.bin` | v1 (32M flash) | yes |
+| `*-cudy_x6-v2-mesh-squashfs-sysupgrade.bin` | v2 (16M flash) | yes |
+| `*-cudy_x6-v2-squashfs-sysupgrade.bin` | v2 (16M flash) | no (more free space) |
+
 Modules added:
+- EasyMesh (prplMesh controller + agent, with local size and bug fix patches)
+  - Disabled by default, enable it in Network -> EasyMesh
+  - Works with EasyMesh extenders (tested with TP-Link RE500X) for client roaming / steering
 - Luci
+  - app EasyMesh (status, topology, client steering and basic settings)
   - app adblock
-  - app openvpn
-  - app wireguard
-  - app sqm
   - app ddns
+  - app sqm
   - app upnp
-  - app vpn policy routing
+  - app package manager
+  - proto openvpn
+  - proto wireguard
+  - proto ppp / ipv6
 - Theme openwrt bootstrap
+- Full wpad (OpenSSL): access point and WiFi client, WPA3, 802.11k/v/r
+- dnsmasq-full, iperf3, curl
+
+Removed to save space: opkg (apk is used), Lua LuCI compatibility, legacy
+iptables tools (firewall4/nftables is used), ipset, ip-full (ip-tiny is used),
+wolfSSL and mbedTLS (everything uses OpenSSL, already needed by prplMesh and OpenVPN).
 
 Installation:
 
